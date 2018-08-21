@@ -16,7 +16,7 @@ class SongsController < ApplicationController
     @song = Song.new(song_params)
     binding.pry
     params[:song][:notes].each do |note|
-    new_note = Note.create(content: note, song_id: @song.id)
+    @song.notes << Note.create(content: note, song_id: @song.id)
     end
     if @song.save
       redirect_to @song
