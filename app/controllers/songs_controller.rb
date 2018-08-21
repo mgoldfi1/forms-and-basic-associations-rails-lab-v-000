@@ -14,6 +14,7 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.new(song_params)
+    pry
     params[:song][:notes].each do |note|
     new_note = Note.create(content: note, song_id: @song.id)
     end
