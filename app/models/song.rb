@@ -26,12 +26,11 @@ class Song < ActiveRecord::Base
 
 
   def note_contents=(content)
-    binding.pry
       self.note_contents = content
   end
 
   def note_contents
-    self.note_contents
+    @note_contents = self.note_contents
   end
 
 end
