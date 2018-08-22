@@ -30,4 +30,8 @@ class Song < ActiveRecord::Base
       self.note_contents = content
   end
 
+  def note_contents
+    self.note_contents 
+  end
+
 end
