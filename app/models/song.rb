@@ -1,3 +1,4 @@
+require 'pry'
 class Song < ActiveRecord::Base
   belongs_to :artist
   belongs_to :genre
@@ -31,6 +32,7 @@ class Song < ActiveRecord::Base
       contents << note.content
     end
     contents
+    binding.pry
   end
 
 end
