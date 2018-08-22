@@ -18,7 +18,6 @@ class SongsController < ApplicationController
     params[:song][:notes].each do |note|
     @song.notes << Note.create(content: note, song_id: @song.id)
     end
-      binding.pry
     if @song.save
       redirect_to @song
     else
