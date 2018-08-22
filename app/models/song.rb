@@ -32,7 +32,6 @@ class Song < ActiveRecord::Base
       contents << note.content
     end
     contents
-    binding.pry
   end
 
 end
